@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         counter = 10;
-        View counterTextView = findViewById(R.id.Textview_counter);
+        TextView counterTextView = findViewById(R.id.Textview_counter);
         counterTextView.setText("" + counter);
 
     }
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void knock(View view) {
         if (counter > 0) {
             counter--;
-            View counterTextView = findViewById(R.id.Textview_counter);
+            TextView counterTextView = findViewById(R.id.Textview_counter);
             counterTextView.setText("" + counter);
             if (counter == 0) {
                 ImageView eggImageView = findViewById(R.id.ImageView_egg);
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void reset(View view) {
         counter = 10;
-        View counterTextView = findViewById(R.id.Textview_counter);
-        counterTextView.setText()
+        TextView counterTextView = findViewById(R.id.Textview_counter);
+        counterTextView.setText("");
         ImageView eggImageView = findViewById(R.id.ImageView_egg);
         eggImageView.setImageResource(R.drawable.egg);
     }
